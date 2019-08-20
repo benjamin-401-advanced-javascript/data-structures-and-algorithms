@@ -53,7 +53,62 @@ describe('Tests Link List Functionality', () => {
     expect(linkedList.toString()).toEqual('jappy 20 10 ');
   })
 
+  it('Can successfully add a node to the end of the linked list', () => {
+    const linkedList = new LinkedList();
+    linkedList.insert(10)
+    linkedList.insert(20)
+    linkedList.insert(30)
+    linkedList.append(40)
+    expect(linkedList.toString()).toEqual('30 20 10 40 ');
+  })
+
+  it('Can successfully add multiple nodes to the end of a linked list', () => {
+    const linkedList = new LinkedList();
+    linkedList.append(10)
+    linkedList.append(20)
+    linkedList.append(30)
+    linkedList.append(40)
+    expect(linkedList.toString()).toEqual('10 20 30 40 ');
+  })
+
+  it('Can successfully insert a node before a node located in the middle of a linked list', () => {
+    const linkedList = new LinkedList();
+    linkedList.append(10);
+    linkedList.append(20);
+    linkedList.append(40);
+    linkedList.append(50);
+    linkedList.insertBefore(40, 30);
+    expect(linkedList.toString()).toEqual('10 20 30 40 50 ');
+  })
+
+  it('Can successfully insert a node before the first node of a linked list', () => {
+    const linkedList = new LinkedList();
+    linkedList.append(10);
+    linkedList.append(20);
+    linkedList.insertBefore(10, 0);
+    expect(linkedList.toString()).toEqual('0 10 20 ');
+  })
+
+  it('Can successfully insert after a node in the middle of the linked list', () => {
+    const linkedList = new LinkedList();
+    linkedList.append(10);
+    linkedList.append(20);
+    linkedList.append(40);
+    linkedList.insertAfter(20, 30);
+    expect(linkedList.toString()).toEqual('10 20 30 40 ');
+  })
+
+  it('Can successfully insert a node after the last node of the linked list', () => {
+    const linkedList = new LinkedList();
+    linkedList.append(10);
+    linkedList.append(20);
+    linkedList.append(30);
+    linkedList.insertAfter(30, 40);
+    expect(linkedList.toString()).toEqual('10 20 30 40 ');
+  })
+
 })
+
 
 
 
