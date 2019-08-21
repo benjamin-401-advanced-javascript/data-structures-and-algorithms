@@ -110,6 +110,34 @@ class LinkedList {
     current.next = newNode;
   }
 
+  kthFromEnd(k) {
+    let current = this.head;
+    // sanity check
+    if (!current || k < 0) {
+      return null;
+    }
+    if (k === 0 && !current.next) {
+      return current.value;
+    }
+
+    let result = new Node(null);
+    result.next = this.head;
+
+    let steps = 1;
+
+    while (current.next) {
+      console.log(k, 'FIRST: steps', steps, 'current', current.value, 'next', current.next.value, 'result', result.value);
+      if (steps === k) {
+        result = result.next;
+      } else {
+        steps += 1;
+      }
+      current = current.next;
+      // console.log('LAST: steps', steps, 'current', current.value, 'next', current.next.value, 'result', result.value);
+    }
+    return result.value;
+  }
+
 }
 
 module.exports = LinkedList;
