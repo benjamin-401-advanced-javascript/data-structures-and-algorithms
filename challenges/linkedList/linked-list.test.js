@@ -155,6 +155,17 @@ describe('Tests Link List Functionality', () => {
     expect(linkedList.kthFromEnd(2)).toEqual(30);
   })
 
+  it('Can reverse a link list in place', () => {
+    const linkedList = new LinkedList();
+    linkedList.append(10);
+    linkedList.append(20);
+    linkedList.append(30);
+    linkedList.append(40);
+    linkedList.append(50);
+    linkedList.reverse()
+    expect(linkedList.toString()).toEqual('50 40 30 20 10 ');
+  })
+
 })
 
 

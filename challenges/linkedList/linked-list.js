@@ -126,16 +126,30 @@ class LinkedList {
     let steps = 1;
 
     while (current.next) {
-      console.log(k, 'FIRST: steps', steps, 'current', current.value, 'next', current.next.value, 'result', result.value);
       if (steps === k) {
         result = result.next;
       } else {
         steps += 1;
       }
       current = current.next;
-      // console.log('LAST: steps', steps, 'current', current.value, 'next', current.next.value, 'result', result.value);
     }
     return result.value;
+  }
+
+  reverse() {
+    let current = this.head;
+    let previousNode = null;
+    let nextNode = current.next;
+    while (current) {
+      // console.log('previousNode', previousNode.value, 'current', current.value, 'nextNode', nextNode.value);
+      current.next = previousNode;
+      previousNode = current;
+      current = nextNode;
+      if (current) {
+        nextNode = current.next;
+      }
+    }
+    this.head = previousNode;
   }
 
 }
