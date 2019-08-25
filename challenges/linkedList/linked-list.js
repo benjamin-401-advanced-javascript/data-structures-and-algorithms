@@ -12,6 +12,11 @@ class LinkedList {
     this.head = null;
   }
 
+  /**
+   * adds a node to front of linked list
+   * @param {*} value
+   * @memberof LinkedList
+   */
   insert(value) {
     const newHead = new Node(value);
 
@@ -23,6 +28,29 @@ class LinkedList {
     }
   }
 
+
+  /**
+   * removes node at head and returns it's value
+   * @returns value of node at head
+   * @memberof LinkedList
+   */
+  removeHead() {
+    if (!this.head) {
+      return null;
+    } else {
+      let tempNode = this.head;
+      this.head = tempNode.next;
+      tempNode.next = null;
+      return tempNode.value;
+    }
+  }
+
+  /**
+   * Linked List include value
+   * @param {*} value
+   * @returns
+   * @memberof LinkedList
+   */
   includes(value) {
     let found = false;
     let current = this.head;
@@ -35,6 +63,11 @@ class LinkedList {
     return found;
   }
 
+  /**
+   * prints out the values of the linked list as a string using JS toSting() method
+   * @returns
+   * @memberof LinkedList
+   */
   toString() {
     let string = '';
     let current = this.head;
@@ -45,6 +78,11 @@ class LinkedList {
     return string;
   }
 
+  /**
+   * adds node with value to end of linked list
+   * @param {*} value
+   * @memberof LinkedList
+   */
   append(value) {
     if (this.head === null) {
       this.head = new Node(value);
@@ -60,6 +98,13 @@ class LinkedList {
     this.appendHelper(value, current.next);
   }
 
+  /**
+   * inserts newVal before value
+   * @param {*} value
+   * @param {*} newVal
+   * @returns
+   * @memberof LinkedList
+   */
   insertBefore(value, newVal) {
     // if list is empty return undefined.
     if (this.head === null) {
@@ -89,6 +134,13 @@ class LinkedList {
     return newNode.value;
   }
 
+  /**
+   * inserts newVal after value
+   * @param {*} value
+   * @param {*} newVal
+   * @returns
+   * @memberof LinkedList
+   */
   insertAfter(value, newVal) {
     // if list is empty return undefined.
     if (this.head === null) {
@@ -110,6 +162,12 @@ class LinkedList {
     current.next = newNode;
   }
 
+  /**
+   * finds the value that's k (number) from the end of the link list counting from 0
+   * @param {*} k
+   * @returns
+   * @memberof LinkedList
+   */
   kthFromEnd(k) {
     let current = this.head;
     // sanity check
@@ -136,6 +194,10 @@ class LinkedList {
     return result.value;
   }
 
+  /**
+   * reverses the linked list
+   * @memberof LinkedList
+   */
   reverse() {
     let current = this.head;
     let previousNode = null;
