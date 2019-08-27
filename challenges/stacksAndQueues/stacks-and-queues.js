@@ -39,6 +39,7 @@ class Stack {
   push(value) {
     this.storage.insert(value);
     this.top = this.peek();
+    return this.top;
   }
 
   pop() {
@@ -56,6 +57,10 @@ class Stack {
   }
 
 }
+
+// const stack = new Stack();
+// console.log(stack.peek())
+
 
 module.exports.stack = Stack;
 module.exports.queue = Queue;
