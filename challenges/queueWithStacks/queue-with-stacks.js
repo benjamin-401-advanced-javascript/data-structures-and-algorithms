@@ -1,6 +1,6 @@
 'use strict';
 
-const Stack = require('../linkedList/linked-list');
+const Stack = require('../linkedList/linked-list')
 
 class PseudoQueue {
 
