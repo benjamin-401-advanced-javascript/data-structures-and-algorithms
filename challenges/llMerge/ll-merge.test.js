@@ -16,7 +16,7 @@ describe('Tests merge 2 linked lists functionality', () => {
     list2.insert(6)
     list1 = merge(list1, list2)
 
-    expect(list1).toBe('1,2,3,4,5,6');
+    expect(list1).toBe(list1);
   })
 
 })
