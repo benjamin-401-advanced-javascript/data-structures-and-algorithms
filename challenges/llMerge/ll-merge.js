@@ -16,7 +16,7 @@ module.exports = (list1, list2) => {
   let flag = true;
 
   while (flag) {
-
+    // console.log('current1', current1.value, 'current2', current2.value, 'store1', store1.value, 'store2', store2.value)
     if (!current2) {
       flag = false;
       break;
