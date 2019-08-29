@@ -12,7 +12,6 @@ class PseudoQueue {
 
   enqueue(value) {
     const temp = this.currentStack.push(value);
-    console.log('ENQ', temp);
     return temp;
   }
 
