@@ -49,7 +49,7 @@ class Stack {
   }
 
   isEmpty() {
-    return this.storage.head ? true : false;
+    return this.storage.head ? false : true;
   }
 
   peek() {
