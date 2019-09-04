@@ -8,7 +8,7 @@
 [Linked List Merge](https://github.com/benjamin-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/llMerge "Linked List Merge")
 
 ## Multi Bracket Validation
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+[Multi Bracket Validation](https://github.com/benjamin-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/multiBracketValidation "Multi Bracket Validation")
 
 ## queue with Stacks
 [queue with Stacks](https://github.com/benjamin-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/queueWithStacks "queue with Stacks")
