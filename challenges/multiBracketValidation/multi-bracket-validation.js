@@ -29,7 +29,6 @@ module.exports = (input) => {
         break;
     }
   }
-  console.log('result', stack.isEmpty());
   return stack.isEmpty()
 }
 
