@@ -38,7 +38,18 @@ describe('Tests Queue using Stacks functionality', () => {
   })
 
   it('Can successfully find distance from root to given node recursively', () => {
-    expect(tree.findDistanceBetween(root, 7)).toEqual(2);
+    expect(tree.findDistanceBetween(root, 10, 7)).toEqual(2);
   })
 
+  it('Can successfully find distance of 2', () => {
+    expect(tree.findDistanceBetween(root, 9, 3)).toEqual(2);
+  })
+
+  it('Can successfully find distance of 1', () => {
+    expect(tree.findDistanceBetween(root, 8, 5)).toEqual(1);
+  })
+
+  it('Can successfully find distance from same node as', () => {
+    expect(tree.findDistanceBetween(root, 9, 9)).toEqual(0);
+  })
 })
