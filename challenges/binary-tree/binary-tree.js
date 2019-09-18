@@ -19,6 +19,10 @@ class BinaryTree {
     return new Node(value);
   }
 
+  findMaximumValue() {
+
+  }
+
   findDistanceBetween(root, parent, child, parentFound = false) {
     if (!root) {
       return -1;
