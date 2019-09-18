@@ -1,15 +1,15 @@
 # data-structures-and-algorithms
 
 
-# Queue with Stacks
-this is a seudo class that creates a queue by using 2 stacks under the hood.
+# Repeated words
+this is a function that returns first word repeated in sentence.
 
 ## Challenge
-create enqueue and dequeue methods
+used a Set to store hashed words and if set already contained it returned it
 
 ## Approach & Efficiency
-i used 2 stacks under the hood
+used a Set to store hashed words and if set already contained it returned it
 
 ## White Boarding Solution
-![white boarding solution](../../assets/queue_with_stacks.jpg "queue_with_stacks.jpg")
+![white boarding solution](../../assets/repeat.jpeg "repeat.jpeg")
 
