@@ -19,18 +19,32 @@ class BinaryTree {
     return new Node(value);
   }
 
-  findDistanceBetween(root, toValue) {
+  findMaximumValue() {
+
+  }
+
+  findDistanceBetween(root, parent, child, parentFound = false) {
     if (!root) {
       return -1;
     }
 
-    let dist = -1
+    if (root.value === parent) { parentFound = true; }
+    let dist = -1;
 
-    const L = this.findDistanceBetween(root.left, toValue);
-    const R = this.findDistanceBetween(root.right, toValue);
+    let L = this.findDistanceBetween(root.left, parent, child, parentFound);
+    let R = this.findDistanceBetween(root.right, parent, child, parentFound);
 
+    if (L >= 0) {
+      dist = L;
+    }
+    if (R >= 0) {
+      dist = R;
+    }
+
+    // console.log('current:', root.value, 'L:', L, 'R:', R, 'dist:', dist);
     // if current root is the value return dist + 1 or if let or right returned a number pass it along with +1
-    if ((root.value === toValue) || (L >= 0) || (R >= 0)) {
+    if (((root.value === child) || (L >= 0) || (R >= 0)) && parentFound) {
+      // console.log('added to distance', dist + 1);
       return dist + 1;
     }
 
