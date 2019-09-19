@@ -29,6 +29,30 @@ class LinkedList {
   }
 
 
+
+  /**
+   *
+   *
+   * @memberof LinkedList
+   */
+  dedupe() {
+    let current = this.head;
+    let last = null;
+    let seenValues = new Set();
+    while (current) {
+      if (seenValues.has(current.value)){
+        last.next = current.next;
+      } else {
+        seenValues.add(current.value);
+      }
+
+      last = current;
+      current = current.next;
+    }
+    
+  }
+
+
   /**
    * removes node at head and returns it's value
    * @returns value of node at head
