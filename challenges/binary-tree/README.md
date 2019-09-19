@@ -14,4 +14,5 @@ if you find the child return a +1
 ## White Boarding Solution
 ![white boarding solution](../../assets/write-leaves.jpg)
 ![white boarding solution](../../assets/distance-between.jpg)
+![white boarding solution](../../assets/find-maximum-binary-tree.jpeg)
 
