@@ -19,10 +19,27 @@ class BinaryTree {
     return new Node(value);
   }
 
-  findMaximumValue() {
+  findMaximumValue(root) {
+    // if root doesn't exist
+    if (!root) {
+      return null;
+    }
+    // if root is child
+    if (!root.left && !root.right){
+      return root.value;
+    } else {
+      const left = this.findMaximumValue(root.left);
+      const right = this.findMaximumValue(root.right);
+      
+      return Math.max(left, right, root.value);
+    }
+
 
   }
+  
+  
 
+  
   findDistanceBetween(root, parent, child, parentFound = false) {
     if (!root) {
       return -1;
