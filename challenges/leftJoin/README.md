@@ -11,13 +11,13 @@
 * Avoid utilizing any of the library methods available to your language.
 
 ## Challenge
-merge to lists together alternating every other node into one list
+for each key value pair in Map1 store key and value then if Map2 has the same key store it's value
 
 ## Approach & Efficiency
-I stored the next value from the other list as i reset the value of the current list
+space = O(n)
+time = O(n)
 
 ## White Boarding Solution
-![white boarding solution](../../assets/ll_merge.jpg)
-![white boarding solution](../../assets/dedupe.JPG)
+![white boarding solution](../../assets/left-join.jpg)
 
 # Data-Structures
